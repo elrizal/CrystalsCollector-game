@@ -9,6 +9,7 @@ $("#target-score").text(targetScore);
 var counter = 1 + Math.floor(Math.random() * 12);
 $(".crystal-image").on("click", function() {
 	counter += 1 + Math.floor(Math.random() * 12);
+
 	document.querySelector("#user-score").innerHTML = counter + userScore;
 	if (counter === targetScore) {
 		alert("You win!");
@@ -49,10 +50,10 @@ function reset() {
 			document.querySelector("#loss-entries").innerHTML = ++lossEntry;
 			reset();
 		}
-		if (winEntry === 1) {
+		if (winEntry === 2) {
 			$(".crystal-image-unlock").attr(
 				"src",
-				"http://via.placeholder.com/200x200/000000/ffffff"
+				"assets/images/05.png"
 			);
 			reset();
 		}
