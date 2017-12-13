@@ -3,135 +3,81 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Crystals Collector Game</title>
-
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	</head>
-	<body style=" background: url(assets/images/thumb-1920-736068.png) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;">
-		<div class="container" style="margin-top: 20px">
+	<body style=" background: url(assets/images/thumb-1920-736068.png) no-repeat center center fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;">
+		<div class="container" align="center" style="margin-top: 20px; width: 80%;">
 			<body>
 				<div class="row">
-				=
 					<h1>Crystal Collector</h1>
-
-					<div class="col-lg-12">
-						<div class="panel panel-default">
-							<div class="panel-body" style="background: transparent;">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porta condimentum mauris. Integer sit amet mi vel velit finibus dignissim. Duis cursus vulputate nunc, quis pulvinar nulla sagittis vitae. Ut aliquet eros id nisl sollicitudin, mattis varius odio sollicitudin. Etiam bibendum est tincidunt, aliquet turpis in, tempus ante. Donec eget arcu varius purus tincidunt pharetra. Suspendisse hendrerit diam sit amet nulla sollicitudin, eget pretium est facilisis. Pellentesque id magna eu lacus rutrum malesuada. Suspendisse ut erat at justo molestie malesuada.
-								Maecenas accumsan volutpat sem. Ut hendrerit odio non gravida rutrum. Praesent metus ipsum, consequat et velit vitae, dignissim varius purus. Sed tristique erat eget leo viverra, non aliquam ante auctor. Pellentesque non augue mi. Donec et nibh in magna aliquet tristique in eu enim. Sed dapibus, eros vel bibendum placerat, mauris metus euismod felis, at sagittis leo ante ut sapien. Curabitur nisl felis, pellentesque vel tortor in, lacinia convallis nulla. Maecenas efficitur tincidunt maximus.</div></p>
-							</div>
-						</div>
-						<div class="col-sm-6 col-lg-3">
-							<div class="panel panel-default">
-								<div class="panel-body">
-									Your Score: <span id="user-score"><strong>-</strong></span>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-lg-3">
-							<div class="panel panel-default">
-								<div class="panel-body">
-									Target Score:  <span id="target-score"><strong>-</strong></span>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-lg-3">
-							<div class="panel panel-default">
-								<div class="panel-body">
-									Wins:  <span id="win-entries"><strong>-</strong></span>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-lg-3">
-							<div class="panel panel-default">
-								<div class="panel-body">
-									Losses:  <span id="loss-entries"><strong>-</strong></span>
-								</div>
-							</div>
-						</div></div>
-						<div class="col-sm-6 col-md-4 col-lg-3" style="padding: 10px;">
-							<img class="crystal-image" src="http://via.placeholder.com/200x200">
-						</div>
-						<div class="col-sm-6 col-md-4 col-lg-3" style="padding: 10px;">
-							<img class="crystal-image" src="http://via.placeholder.com/200x200">
-							
-						</div>
-						<div class="col-sm-6 col-md-3 col-lg-3" style="padding: 10px;">
-							<img class="crystal-image" src="http://via.placeholder.com/200x200">
-							
-						</div>
-						<div class="col-sm-6 col-md-3 col-lg-3" style="padding: 10px;">
-							<img class="crystal-image" src="http://via.placeholder.com/200x200">
-							
-						</div>
-												<div class="col-sm-6 col-md-4 col-lg-3" style="padding: 10px;">
-							<img class="crystal-image" src="http://via.placeholder.com/200x200">
-						</div>
-						<div class="col-sm-6 col-md-4 col-lg-3" style="padding: 10px;">
-							<img class="crystal-image" src="http://via.placeholder.com/200x200">
-							
-						</div>
-						<div class="col-sm-6 col-md-3 col-lg-3" style="padding: 10px;">
-							<img class="crystal-image" src="http://via.placeholder.com/200x200">
-							
-						</div>
-						<div class="col-sm-6 col-md-3 col-lg-3" style="padding: 10px;">
-							<img class="crystal-image" src="http://via.placeholder.com/200x200">
-							
-						</div>
-
-						<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-						<script type="text/javascript">
-
-var userScore = 0;
-var winEntry= 0;
-var lossEntry= 0;
-var targetScore = 19 + Math.floor(Math.random() * 120);
-
-
-  $("#target-score").text(targetScore);
-
-  var counter = 1 + Math.floor(Math.random() * 12);
-  $(".crystal-image").on("click", function() {
-
-  	counter += 1 + Math.floor(Math.random() * 12);
-  	document.querySelector("#user-score").innerHTML = counter + userScore;
-
-
-    if (counter === targetScore) {
-      alert("You win!");
-          	document.querySelector("#win-entries").innerHTML = ++winEntry;
-    		reset();
-    }
-     else if (counter >= targetScore) {
-      alert("You lose!!");
-
-    		document.querySelector("#loss-entries").innerHTML = ++lossEntry;
-    		reset();
-    }
-
-  });			
-
-  function reset(){
- 	targetScore = 19 + Math.floor(Math.random() * 120);
- 	$("#user-score").text(userScore);
- 	$("#target-score").text(targetScore);
- 	console.log(targetScore);
- 	
- 	userScore = 0; counter= 0;
-console.log(userScore);
-
-
- 	} //will put in repeating functions later		
-							
-
-						</script>
-						</strong>
+					<div class="col-lg-12" style="margin-bottom: 20px">
+						
+								
+								<h3>How does this work?</h3>
+								<ol class="list-group" align="left" style="width: 70%; background: none;">
+									<li class="list-group-item">
+									Check your target score. The numbers you need will need to match this number for a point. This will change each round.</li>
+								<li class="list-group-item">Tap any of the four crystals. Each has a hidden value, so you'll have to guess!</li>
+							<li class="list-group-item">If the numbers you find are over the target score, you loose and have another chance!</li>
+						<li class="list-group-item">Win or loose, your current score will be set to 0 and you'll receive another target score for a chance to add another point!</li></ol>
+						<strong>BONUS:</strong> Challenge yourself to unlock a new crystal by winning 5 times!
+					
+			</div>
+			<div class="col-sm-6 col-lg-3">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						Your Score: <span id="user-score"><strong>-</strong></span>
 					</div>
 				</div>
 			</div>
-		</body>
-	</html>
+			<div class="col-sm-6 col-lg-3">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						Target Score:  <span id="target-score"><strong>-</strong></span>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-lg-3">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						Wins:  <span id="win-entries"><strong>-</strong></span>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-lg-3">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						Losses:  <span id="loss-entries"><strong>-</strong></span>
+					</div>
+				</div>
+			</div></div>
+			<div class="col-sm-6 col-md-3 col-lg-3" style="padding: 10px;height: 120px;width: 210px;">
+				<img class="crystal-image" src="http://via.placeholder.com/200x200">
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-3" style="padding: 10px;height: 120px;width: 210px;">
+				<img class="crystal-image" src="http://via.placeholder.com/200x200">
+				
+			</div>
+			<div class="col-sm-6 col-md-3 col-lg-3" style="padding: 10px;height: 120px;width: 210px;">
+				<img class="crystal-image" src="http://via.placeholder.com/200x200">
+				
+			</div>
+			<div class="col-sm-6 col-md-3 col-lg-3" style="padding: 10px;height: 120px;width: 210px;">
+				<img class="crystal-image-10pts" src="http://via.placeholder.com/200x200">
+				
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-3" style="padding: 10px;height: 120px;width: 210px;">
+				<img class="crystal-image-unlock" src="http://via.placeholder.com/200x200/ffffff/000000">
+			</div>
+			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+			<script type="text/javascript" src="assets/javascript/game.js"></script>
+			</strong>
+		</div>
+	</div>
+</div>
+</body>
+</html>
