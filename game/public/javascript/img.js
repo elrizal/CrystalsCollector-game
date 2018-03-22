@@ -1,18 +1,14 @@
-var images = ['assets/images/ruby/ruby2.png', 'assets/images/ruby/ruby6.png', 'assets/images/ruby/ruby10.png'];
+var images = ['assets/images/ruby/ruby0001.png', 'assets/images/ruby/ruby0009.png', 'assets/images/ruby/ruby0017.png'];
 var index = 0;
-
-$( "#Image" ).hover(function(imgAnimate) {
-
-    
+$( "#Image" ).click(function(imgAnimate) {
 function imgAnimate()
 {
   $('#Image').animate('fast', function()
   {
     $(this).attr('src', images[index]);
-
     $(this).animate('fast', function()
     {
-      if (index == images.length-3)
+      if (index === images.length -1)
       {
         index = 0;
       }
@@ -26,12 +22,13 @@ function imgAnimate()
 
 $(document).ready(function()
 {
-  setInterval (imgAnimate, 1000);
+  setInterval (imgAnimate, 2000);
   
 });
+function reset() {
+  clearInterval(int);
+  imgAnimate();
+}
 });
 
-function reset() {
-    clearInterval(int);
-    imgAnimate();
-  }
+reset();
