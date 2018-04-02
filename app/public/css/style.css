@@ -6,6 +6,38 @@ html {
     background-size: cover;
   }
 
-  #Image {
-    max-width: 30%;
+  #Image, .crystal-image{
+    max-width: 23%;
    }
+   @media only screen and (max-width: 800px) {
+    #Image, .crystal-image{
+      max-width: 40%;
+     }
+}
+
+   .section1{
+     background: white;
+     max-width: 100%;
+     padding: 10px;
+     margin-top: 0px;
+     font-size: 1em;
+   }
+
+   #fixit {
+     position: fixed;
+     background: transparent;
+     box-shadow: none;
+   }
+
+   h1 {
+     padding-top: 100px;
+     font-size: 2em;
+     margin: 0 auto;
+     font-family: 'Bungee Shade', cursive;
+     color: white;
+   }
+   @media only screen and (max-width: 360px) {
+    h1 {
+     font-size: 1em;
+     }
+}

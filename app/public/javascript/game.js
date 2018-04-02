@@ -13,10 +13,12 @@ $(".crystal-image").on("click", function() {
 	document.querySelector("#user-score").innerHTML = counter + userScore;
 	if (counter === targetScore) {
 		alert("You win!");
+		$('.modal').modal();
 		document.querySelector("#win-entries").innerHTML = ++winEntry;
 		reset();
 	} else if (counter >= targetScore) {
-		alert("You lose!!");
+		$('.modal').modal();
+		alert('lost!')
 		document.querySelector("#loss-entries").innerHTML = ++lossEntry;
 		reset();
 	}
@@ -59,3 +61,8 @@ function reset() {
 		}
 	});
 }
+
+$(document).ready(function(){
+    $('.modal').modal();
+  });
+        
