@@ -120,7 +120,6 @@ function loop() {
 
    $('#Image-Sap').attr('src', imagesSap[cnt])
 
-
   $('#Image-Ruby').attr('src', imagesRuby[cnt])
 
 }

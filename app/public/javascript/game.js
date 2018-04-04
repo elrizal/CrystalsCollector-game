@@ -1,4 +1,8 @@
 
+$(document).ready(function(){
+    $('.modal').modal();
+  });
+
 var userScore = 0;
 var winEntry = 0;
 var lossEntry = 0;
@@ -7,23 +11,25 @@ var targetScore = 19 + Math.floor(Math.random() * 120);
 $("#target-score").text(targetScore);
 
 var counter = 1 + Math.floor(Math.random() * 12);
+
 $(".crystal-image").on("click", function() {
 	counter += 1 + Math.floor(Math.random() * 12);
-
 	document.querySelector("#user-score").innerHTML = counter + userScore;
+
 	if (counter === targetScore) {
-		alert("You win!");
-		$('.modal').modal();
+		console.log("You win!");
+		$("#modal-won").modal("open");
 		document.querySelector("#win-entries").innerHTML = ++winEntry;
 		reset();
+
 	} else if (counter >= targetScore) {
-		$('.modal').modal();
-		alert('lost!')
+		$("#modal-lost").modal("open");
+		console.log('lost!');
 		document.querySelector("#loss-entries").innerHTML = ++lossEntry;
 		reset();
 	}
 	if (winEntry === 1) {
-		alert("You've unlocked an item!");
+		// alert("You've unlocked an item!");
 		$(".crystal-image-unlock1").attr(
 			"src",
 			"http://via.placeholder.com/200x200/000000/ffffff"
@@ -44,11 +50,11 @@ function reset() {
 		counter += 1 + Math.floor(Math.random() * 12);
 		document.querySelector("#user-score").innerHTML = counter + userScore;
 		if (counter === targetScore) {
-			alert("You win! Item unlocked.");
+			$("#modal-won").modal("open");
 			document.querySelector("#win-entries").innerHTML = ++winEntry;
 			reset();
 		} else if (counter >= targetScore) {
-			alert("You lose!!");
+			$("#modal-lost").modal("open");
 			document.querySelector("#loss-entries").innerHTML = ++lossEntry;
 			reset();
 		}
@@ -62,7 +68,3 @@ function reset() {
 	});
 }
 
-$(document).ready(function(){
-    $('.modal').modal();
-  });
-        

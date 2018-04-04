@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Crystals Collector Game</title>
@@ -9,22 +10,12 @@
 	<link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
-<body>
 
-	<nav>
-		<div class="nav-wrapper">
-		  <a href="" class="brand-logo"></a>
-		  <ul id="nav-mobile" class="right hide-on-med-and-down">
-			<li><a href="">sass</a></li>
-			<li><a href="">sass <span class="new badge">4</span></a></li>
-			<li><a href="">sass</a></li>
-		  </ul>
-		</div>
-	  </nav>
+<body>
 
 	<div class="parallax-container">
 		<div class="parallax">
-		<img src="images/bg1.jpg">
+			<img src="images/bg1.jpg">
 		</div>
 
 		<div class="container">
@@ -35,25 +26,25 @@
 		<div class="container" align="center">
 
 			<div class="row">
-				
-					<h3>How does this work?</h3>
-					<ul class="collection">
-						<li class="collection-item">Check your target score. The numbers you gain from each crystal will amount towards the target score. This will change
-							each round.</li>
-						<li class="collection-item">Tap any of the four crystals. Each has a hidden value, so you'll have to guess!</li>
-						<li class="collection-item">If the numbers you find are over the target score, you loose and have another chance!</li>
-						<li class="collection-item">Win or loose, your current score will be set to 0 and you'll receive another target score for a chance to add another
-							point!
-						</li>
-						</ol>
-						<strong>BONUS:</strong> Challenge yourself to unlock a new crystal by winning 2 times!
-				</div>
+
+				<h3>How does this work?</h3>
+				<ul class="collection">
+					<li class="collection-item">Check your target score. The numbers you gain from each crystal will amount towards the target score. This will change
+						each round.</li>
+					<li class="collection-item">Tap any of the four crystals. Each has a hidden value, so you'll have to guess!</li>
+					<li class="collection-item">If the numbers you find are over the target score, you loose and have another chance!</li>
+					<li class="collection-item">Win or loose, your current score will be set to 0 and you'll receive another target score for a chance to add another
+						point!
+					</li>
+					</ol>
+					<strong>BONUS:</strong> Challenge yourself to unlock a new crystal by winning 2 times!
 			</div>
 		</div>
 	</div>
+	</div>
 
 
-	<nav>
+	<nav id="scorebar">
 		<div class="nav-wrapper">
 			<div class="container" align='center'>
 				Your Score:
@@ -79,34 +70,23 @@
 		</div>
 	</nav>
 
-
 	<div class="parallax-container">
-		<div id="test" align='center'>
-			<!-- <img id="Image" class="crystal-image" src="images/ruby/ruby0001.png" alt="image test" />
-		<img id="Image" class="crystal-image" src="images/ruby/ruby0001.png" alt="image test" />
-
-	 -->
+		<div id="char" align='center'>
 			<img id="Image-Pearl" class="crystal-image" src="images/pearl/crystalgems-pearl0001.png" alt="image test" />
-
-			<img id="Image-Am" class="crystal-image" src="images/amethyst/amethyst0001.png"  alt="image test">
-
+			<img id="Image-Am" class="crystal-image" src="images/amethyst/amethyst0001.png" alt="image test">
 			<img id="Image-Sap" class="crystal-image" src="images/sapphire/sappy0001.png" alt="image test">
-
 			<img id="Image-Ruby" class="crystal-image" src="images/ruby/ruby0001.png" alt="image test">
-
+				<img class="crystal-image-unlock" src="images/unlock.png">
+		
 			<div class="parallax">
 				<img src="images/bg.png">
 			</div>
 		</div>
 	</div>
-	<!-- <div class="col-sm-6 col-md-3 col-lg-3" style="padding: 10px;height: 120px;width: 210px; margin-bottom:100px"">
+	<!-- <div style="padding: 10px;height: 120px;width: 210px; margin-bottom:100px"">
 							<img class="crystal-image-unlock" src="assets/images/unlock.png">
 						</div> -->
 
-
-
-	<!-- Modal Trigger -->
-	<!-- <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a> -->
 
 	<!-- Modal Structure -->
 	<div id="modal-won" class="modal">
@@ -128,7 +108,9 @@
 			<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Next time!</a>
 		</div>
 	</div>
-
+	</div>
+	</div>
+	</div>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript" src="javascript/game.js"></script>
 	<script type="text/javascript" src="javascript/img.js"></script>
@@ -136,18 +118,7 @@
 	<script type="text/javascript" src="javascript/parallax.js"></script>
 	<script type="text/javascript" src="javascript/sideNav.js"></script>
 	<script src="js/materialize.min.js" type="text/javascript"></script>
-	<script type="text/javascript"> 
-	$(document).ready(function(){
 
-$('#sidenav').sidenav();
-
-});
-
-	</script>
-	</strong>
-	</div>
-	</div>
-	</div>
 </body>
 
 </html>
