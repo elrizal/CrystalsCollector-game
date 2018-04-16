@@ -5,7 +5,41 @@ html {
     -o-background-size: cover;
     background-size: cover;
   }
+  #scorebar {
+    height: 100%;
+    background: #946288;
+    text-shadow: 1px 1px #946288;
+    font-size: 18px;
+  }
+#char {
+  margin-top: 30px;
+}
+  #Image, .crystal-image{
+    max-width: 23%;
+   }
+   @media only screen and (max-width: 800px) {
+    #Image, .crystal-image{
+      max-width: 40%;
+     }
+}
 
-  #Image {
-    max-width: 30%;
+   .section1{
+     background: white;
+     max-width: 100%;
+     padding: 10px;
+     margin-top: 0px;
+     font-size: 1em;
+   }
+
+   #fixit {
+     position: fixed;
+     background: transparent;
+     box-shadow: none;
+   }
+
+   h1 {
+     padding-top: 90px;
+     margin: 0 auto;
+     font-family: 'Bungee Shade', cursive;
+     color: white;
    }
