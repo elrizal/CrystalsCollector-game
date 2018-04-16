@@ -44,8 +44,13 @@ html {
      color: white;
    }
 .steven {
-  max-width: 60%;
+  max-width: 80%;
+  margin: 0 auto;
 }
 .modal {
   max-height: 800px;
+  background-color: white;
+}
+#modal-content {
+  background-color: white;
 }
