@@ -29,10 +29,10 @@ $(".crystal-image").on("click", function() {
 		reset();
 	}
 	if (winEntry === 1) {
-		// alert("You've unlocked an item!");
+		console.log("You've unlocked an item!");
 		$(".crystal-image-unlock1").attr(
 			"src",
-			"http://via.placeholder.com/200x200/000000/ffffff"
+			"images/garnet/garnet0001.png"
 		);
 	}
 });
@@ -58,13 +58,15 @@ function reset() {
 			document.querySelector("#loss-entries").innerHTML = ++lossEntry;
 			reset();
 		}
-		if (winEntry === 2) {
+		if (winEntry === 1) {
 			$(".crystal-image-unlock").attr(
 				"src",
-				"assets/images/05.png"
-			);
+				"images/garnet/garnet0001.png"
+			).attr('id', 'Image-Garnet');
+	
 			reset();
 		}
 	});
 }
 
+// "Image-Garnet"
