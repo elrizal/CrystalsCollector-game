@@ -86,9 +86,15 @@ var imagesPearl = [
   'images/pearl/crystalgems-pearl0017.png',
   'images/pearl/crystalgems-pearl0018.png',
   'images/pearl/crystalgems-pearl0019.png'
-]
+];
 
-function preload(imagesRuby, imagesSap, imagesAme, imagesPearl) {
+var imagesGarnet = [ 'images/garnet/garnet0001.png', 'images/garnet/garnet0002.png', 'images/garnet/garnet0003.png', 'images/garnet/garnet0004.png',
+'images/garnet/garnet0005.png', 'images/garnet/garnet0006.png', 'images/garnet/garnet0007.png', 'images/garnet/garnet0008.png', 'images/garnet/garnet0009.png',
+'images/garnet/garnet0010.png', 'images/garnet/garnet0011.png', 'images/garnet/garnet0012.png', 'images/garnet/garnet0013.png', 'images/garnet/garnet0014.png',
+'images/garnet/garnet0015.png', 'images/garnet/garnet0016.png', 'images/garnet/garnet0017.png', 'images/garnet/garnet0018.png', 'images/garnet/garnet0019.png',
+'images/garnet/garnet0020.png', 'images/garnet/garnet0021.png', 'images/garnet/garnet0022.png', 'images/garnet/garnet0023.png'];
+
+function preload(imagesRuby, imagesSap, imagesAme, imagesPearl, imagesGarnet) {
   $(imagesRuby)
     .each(function () {
       $('<img/>')[0].src = this;
@@ -102,11 +108,15 @@ function preload(imagesRuby, imagesSap, imagesAme, imagesPearl) {
   $(imagesPearl).each(function () {
     $('<img/>')[0].src = this;
   });
+  $(imagesGarnet).each(function () {
+    $('<img/>')[0].src = this;
+  });
 }
 preload(imagesRuby);
 preload(imagesSap);
 preload(imagesAme);
 preload(imagesPearl);
+preload(imagesGarnet);
 cnt = 0;
 
 function loop() {
@@ -117,11 +127,9 @@ function loop() {
   cnt++;
 
   $('#Image-Am').attr('src', imagesAme[cnt])
-
-   $('#Image-Sap').attr('src', imagesSap[cnt])
-
+  $('#Image-Sap').attr('src', imagesSap[cnt])
   $('#Image-Ruby').attr('src', imagesRuby[cnt])
-
+  $('#Image-Garnet').attr('src', imagesGarnet[cnt])
 }
 
 $('#Image-Ruby').on('click', function () {
@@ -136,3 +144,7 @@ $('#Image-Am').on('click', function () {
 $('#Image-Pearl').on('click', function () {
   loop();
 })
+$('#Image-Garnet').on('click', function () {
+  loop();
+})
+

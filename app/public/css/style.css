@@ -1,56 +1,74 @@
-html { 
-    background: url(../images/bg.png) no-repeat center center fixed; 
+html {
+    background: url(../images/bg.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-  }
-  #scorebar {
+}
+
+#scorebar {
     height: 100%;
     background: #946288;
     text-shadow: 1px 1px #946288;
     font-size: 18px;
-  }
+}
+
 #char {
-  margin-top: 30px;
+    margin-top: 30px;
+    margin-bottom: 40px;
 }
-  #Image, .crystal-image{
+
+#Image,
+.crystal-image {
     max-width: 23%;
-   }
-   @media only screen and (max-width: 800px) {
-    #Image, .crystal-image{
-      max-width: 40%;
-     }
+}
+#Image-Garnet {
+  max-width:33%;
 }
 
-   .section1{
-     background: white;
-     max-width: 100%;
-     padding: 10px;
-     margin-top: 0px;
-     font-size: 1em;
-   }
+@media only screen and (max-width: 800px) {
+    #Image,
+    .crystal-image {
+        max-width: 40%;
+    }
+}
 
-   #fixit {
-     position: fixed;
-     background: transparent;
-     box-shadow: none;
-   }
+.section1 {
+    background: white;
+    max-width: 100%;
+    padding: 10px;
+    margin-top: 0px;
+    font-size: 1em;
+}
 
-   h1 {
-     padding-top: 90px;
-     margin: 0 auto;
-     font-family: 'Bungee Shade', cursive;
-     color: white;
-   }
+#fixit {
+    position: fixed;
+    background: transparent;
+    box-shadow: none;
+}
+
+h1 {
+    padding-top: 90px;
+    margin: 0 auto;
+    font-family: 'Bungee Shade', cursive;
+    color: white;
+}
+
 .steven {
-  max-width: 80%;
-  margin: 0 auto;
+    margin: 0 auto;
 }
+
 .modal {
-  max-height: 800px;
-  background-color: white;
+    max-height: 900px;
+    background-color: white;
 }
+
 #modal-content {
-  background-color: white;
+    background-color: white;
+}
+
+.crystal-image-unlock {
+    padding: 5px;
+    margin: 3px;
+    max-width: 30%;
 }
