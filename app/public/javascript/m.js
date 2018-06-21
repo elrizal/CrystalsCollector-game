@@ -10022,8 +10022,6 @@ if (Vel) {
 $(document).ready(function(){
   $('.parallax').parallax();
 });
-var elem = document.querySelector('.sidenav');
-var instance = M.Sidenav.init(elem, options);
 
 // Initialize collapsible (uncomment the lines below if you use the dropdown variation)
 // var collapsibleElem = document.querySelector('.collapsible');
@@ -10034,4 +10032,4 @@ var instance = M.Sidenav.init(elem, options);
 $(document).ready(function(){
   $('.sidenav').sidenav();
 });
-      
+instance.next();

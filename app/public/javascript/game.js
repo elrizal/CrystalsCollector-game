@@ -59,14 +59,17 @@ function reset() {
 			reset();
 		}
 		if (winEntry === 1) {
-			$(".crystal-image-unlock").attr(
-				"src",
-				"images/garnet/garnet0001.png"
+			$(".crystal-image-unlock").attr("src","images/garnet/garnet0001.png"
 			).attr('id', 'Image-Garnet');
-	
+			
+			$('#Image-Ruby').remove();
+			$('#Image-Sap').remove();
 			reset();
 		}
 	});
 }
-
-// "Image-Garnet"
+// 
+$(document).ready(function(){
+    $('.tap-target').tapTarget();
+  });
+      
