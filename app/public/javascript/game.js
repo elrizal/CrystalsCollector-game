@@ -45,6 +45,7 @@ function reset() {
 	$(".crystal-image").on("click", function() {
 		counter += 1 + Math.floor(Math.random() * 12);
 		document.querySelector("#user-score").innerHTML = counter + userScore;
+		
 		if (counter === targetScore) {
 			$("#modal-won").modal("open");
 			document.querySelector("#win-entries").innerHTML = ++winEntry;
