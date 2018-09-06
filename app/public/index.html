@@ -1,120 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Crystals Collector Game</title>
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/materialize.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head>
-
-<body>
-
-	<div class="parallax-container">
-		<div class="parallax">
-			<img src="images/bg1.jpg">
-		</div>
-		<div class="container">
-			<h1>Crystal Collector</h1>
-		</div>
-	</div>
-	<div class="section1">
-		<div class="container" align="center">
-
-			<div class="row">
-				<h3>How does this work?</h3>
-				<ul class="collection">
-					<li class="collection-item">Check your target score. The numbers you gain from each crystal will amount towards the target score. This will change
-						each round.</li>
-					<li class="collection-item">Tap any of the four crystals. Each has a hidden value, so you'll have to guess!</li>
-					<li class="collection-item">If the numbers you find are over the target score, you loose and have another chance!</li>
-					<li class="collection-item">Win or loose, your current score will be set to 0 and you'll receive another target score for a chance to add another
-						point!
-					</li>
-					</ol>
-					<strong>BONUS:</strong> Challenge yourself to unlock a new crystal by winning 2 times!
-			</div>
-		</div>
-	</div>
-	</div>
-
-
-	<nav id="scorebar">
-		<div class="nav-wrapper">
-			<div class="container" align='center'>
-				Your Score:
-				<span id="user-score" style="font-size: 20px;">
-					<strong>-</strong>
-				</span>
-
-				Target Score:
-				<span id="target-score" style="font-size: 20px;">
-					<strong>-</strong>
-				</span>
-
-				Your Wins:
-				<span id="win-entries">
-					<strong>-</strong>
-				</span>
-
-				Your Losses:
-				<span id="loss-entries">
-					<strong>-</strong>
-				</span>
-			</div>
-		</div>
-	</nav>
-		<div id="char" align='center'>
-			<img id="Image-Pearl" class="crystal-image" src="images/pearl/crystalgems-pearl0001.png" alt="image test" />
-			<img id="Image-Am" class="crystal-image" src="images/amethyst/amethyst0001.png" alt="image test">
-			<img id="Image-Sap" class="crystal-image" src="images/sapphire/sappy0001.png" alt="image test">
-			<img id="Image-Ruby" class="crystal-image" src="images/ruby/ruby0001.png" alt="image test">
-			<img class="crystal-image-unlock" src="images/unlock.png">
-	</div>
-
-			 <!-- Element Showed -->
-			 <a id="menu" class="waves-effect waves-light btn btn-floating" ><i class="material-icons">o</i></a>
-
-			 <!-- Tap Target Structure -->
-			 <div class="tap-target" data-target="menu">
-			   <div class="tap-target-content">
-				 <h5>Title</h5>
-				 <p>A bunch of text</p>
-			   </div>
-			 </div>
-	<div id="modal-won" class="modal">
-		<div class="modal-content">
-			<img id="Image-Win" class="steven" src="images/steven/win.gif" alt="won" loop=infinite />
-			<h5>"I got this!"</h5>
-			<p>you won this round!</p>
-		</div>
-		<div class="modal-footer">
-			<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Next round!</a>
-		</div>
-	</div>
-
-	<div id="modal-lost" class="modal">
-		<div class="modal-content">
-			<img id="Image-Opps" class="steven" src="images/steven/opps.gif" alt="opps" loop=infinite />
-			<h5>"OPPS!"</h5>
-			<p>you lost this round!</p>
-		</div>
-		<div class="modal-footer">
-			<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Next time!</a>
-		</div>
-	</div>
-	</div>
-	</div>
-	</div>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script type="text/javascript" src="javascript/game.js"></script>
-	<script type="text/javascript" src="javascript/img.js"></script>
-	<script type="text/javascript" src="javascript/m.js"></script>
-	<script type="text/javascript" src="javascript/parallax.js"></script>
-	<script type="text/javascript" src="javascript/sideNav.js"></script>
-	<script src="js/materialize.min.js" type="text/javascript"></script>
-
+  <head>
+    <meta charset="UTF-8">
+    <title>Crystals Collector Game</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="parallax-container">
+      <div class="parallax">
+        <img src="images/bg1.jpg">
+      </div>
+      <div class="container">
+        <h1>Crystal Collector</h1>
+      </div>
+    </div>
+    <div class="section1">
+      <div class="container" align="center">
+        <div class="row">
+          <h3>How does this work?</h3>
+          <ul class="collection">
+            <li class="collection-item">Check your target score. The numbers you gain from each crystal will amount towards the target score. This will change each round.</li>
+            <li class="collection-item">Tap any of the four crystals. Each has a hidden value, so you'll have to guess!</li>
+            <li class="collection-item">If the numbers you find are over the target score, you loose and have another chance!</li>
+            <li class="collection-item">Win or loose, your current score will be set to 0 and you'll receive another target score for a chance to add another point!
+            </li>
+          </ol>
+          <strong>BONUS:</strong> Challenge yourself to unlock a new crystal by winning 3 times!
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav id="scorebar">
+    <div class="nav-wrapper">
+      <div class="container" align='center'>
+        Your Score:
+        <span id="user-score" style="font-size: 20px;">
+          <strong>-</strong>
+        </span> Target Score:
+        <span id="target-score" style="font-size: 20px;">
+          <strong>-</strong>
+        </span> Your Wins:
+        <span id="win-entries">
+          <strong>-</strong>
+        </span> Your Losses:
+        <span id="loss-entries">
+          <strong>-</strong>
+        </span>
+      </div>
+    </div>
+  </nav>
+  <div id="char" align='center'>
+    <img id="Image-Pearl" class="crystal-image" src="images/pearl/crystalgems-pearl0001.png" alt="image test" />
+    <img id="Image-Am" class="crystal-image" src="images/amethyst/amethyst0001.png" alt="image test">
+    <img id="Image-Sap" class="crystal-image" src="images/sapphire/sappy0001.png" alt="image test">
+    <img id="Image-Ruby" class="crystal-image" src="images/ruby/ruby0001.png" alt="image test">
+    <img class="crystal-image-unlock" src="images/unlock.png">
+  </div>
+  <!-- Element Showed -->
+  <a id="menu" class="waves-effect waves-light btn btn-floating"><i class="material-icons">o</i></a>
+  <!-- Tap Target Structure -->
+  <div class="tap-target" data-target="menu">
+    <div class="tap-target-content">
+      <h5>Title</h5>
+      <p>A bunch of text</p>
+    </div>
+  </div>
+  <div id="modal-won" class="modal">
+    <div class="modal-content">
+      <img id="Image-Win" class="steven" src="images/steven/win.gif" alt="won" loop=infinite />
+      <h5>"I got this!"</h5>
+      <p>you won this round!</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Next round!</a>
+    </div>
+  </div>
+  <div id="modal-lost" class="modal">
+    <div class="modal-content">
+      <img id="Image-Opps" class="steven" src="images/steven/opps.gif" alt="opps" loop=infinite />
+      <h5>"OPPS!"</h5>
+      <p>you lost this round!</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Next time!</a>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+<script type="text/javascript" src="javascript/game.js"></script>
+<script type="text/javascript" src="javascript/img.js"></script>
+<script type="text/javascript" src="javascript/m.js"></script>
+<script type="text/javascript" src="javascript/parallax.js"></script>
 </body>
-
 </html>

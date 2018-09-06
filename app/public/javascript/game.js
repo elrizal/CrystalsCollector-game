@@ -36,16 +36,12 @@ $(".crystal-image").on("click", function() {
 		);
 	}
 });
-
 function reset() {
 	targetScore = 19 + Math.floor(Math.random() * 120);
 	$("#user-score").text(userScore);
 	$("#target-score").text(targetScore);
-	console.log(targetScore);
 	userScore = 0;
 	counter = 0;
-
-	console.log(userScore);
 	$(".crystal-image").on("click", function() {
 		counter += 1 + Math.floor(Math.random() * 12);
 		document.querySelector("#user-score").innerHTML = counter + userScore;
@@ -58,17 +54,15 @@ function reset() {
 			document.querySelector("#loss-entries").innerHTML = ++lossEntry;
 			reset();
 		}
-		if (winEntry === 1) {
+		if (winEntry === 3) {
 			$(".crystal-image-unlock").attr("src","images/garnet/garnet0001.png"
 			).attr('id', 'Image-Garnet');
-			
 			$('#Image-Ruby').remove();
 			$('#Image-Sap').remove();
 			reset();
 		}
 	});
 }
-// 
 $(document).ready(function(){
     $('.tap-target').tapTarget();
   });

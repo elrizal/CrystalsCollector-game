@@ -115,46 +115,49 @@ var imagesGarnet = [
 ];
 
 function preload(imagesRuby, imagesSap, imagesAme, imagesPearl, imagesGarnet) {
-  $(imagesRuby)
-    .each(function () {
+    $(imagesRuby).each(function () {
+      $('<img/>')[0].src = this;
+      });
+    $(imagesSap).each(function () {
       $('<img/>')[0].src = this;
     });
-  $(imagesSap).each(function () {
-    $('<img/>')[0].src = this;
-  });
-  $(imagesAme).each(function () {
-    $('<img/>')[0].src = this;
-  });
-  $(imagesPearl).each(function () {
-    $('<img/>')[0].src = this;
-  });
-  $(imagesGarnet).each(function () {
-    $('<img/>')[0].src = this;
-  });
-}
-preload(imagesRuby);
-preload(imagesSap);
-preload(imagesAme);
-preload(imagesPearl);
-preload(imagesGarnet);
-cnt = 0;
+    $(imagesAme).each(function () {
+      $('<img/>')[0].src = this;
+    });
+    $(imagesPearl).each(function () {
+      $('<img/>')[0].src = this;
+    });
+    $(imagesGarnet).each(function () {
+      $('<img/>')[0].src = this;
+    });
+  }
+  preload(imagesRuby);
+  preload(imagesSap);
+  preload(imagesAme);
+  preload(imagesPearl);
+  preload(imagesGarnet);
+  cnt = 0;
+    function loop() {
+      var sapImg = $('#Image-Sap');
+      var pearlImg =  $('#Image-Pearl');
+      var amImg = $('#Image-Am');
+      var rubyImg = $('#Image-Ruby');
+      var garImg = $('#Image-Garnet');
 
-function loop() {
-  $('#Image-Pearl').attr('src', imagesPearl[cnt])
-  $('#Image-Am').attr('src', imagesAme[cnt])
-  $('#Image-Sap').attr('src', imagesSap[cnt])
-  $('#Image-Ruby').attr('src', imagesRuby[cnt])
-  $('#Image-Garnet').attr('src', imagesGarnet[cnt])
-  setTimeout(function () {
-    loop()
-  }, 50)
-  cnt++;
-}
-
-
+      pearlImg.attr('src', imagesPearl[cnt])
+      amImg.attr('src', imagesAme[cnt])
+      sapImg.attr('src', imagesSap[cnt])
+      rubyImg.attr('src', imagesRuby[cnt])
+      garImg.attr('src', imagesGarnet[cnt])
+      
+      setTimeout(function () {
+        loop()
+      }, 50)
+      cnt++;
+    }
 
 $('#Image-Ruby')
-  .on('click', function () {
+.mouseover(function() {
     loop();
   })
 $('#Image-Sap').on('click', function () {
