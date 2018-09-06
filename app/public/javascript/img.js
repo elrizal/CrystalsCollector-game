@@ -131,19 +131,14 @@ function preload(imagesRuby, imagesSap, imagesAme, imagesPearl, imagesGarnet) {
       $('<img/>')[0].src = this;
     });
   }
-  preload(imagesRuby);
-  preload(imagesSap);
-  preload(imagesAme);
-  preload(imagesPearl);
-  preload(imagesGarnet);
+  preload(imagesRuby, imagesSap, imagesAme,imagesPearl, imagesGarnet);
   cnt = 0;
-    function loop() {
+      function loop(sapImg, pearlImg, amImg, rubyImg, garImg) {
       var sapImg = $('#Image-Sap');
       var pearlImg =  $('#Image-Pearl');
       var amImg = $('#Image-Am');
       var rubyImg = $('#Image-Ruby');
       var garImg = $('#Image-Garnet');
-
       pearlImg.attr('src', imagesPearl[cnt])
       amImg.attr('src', imagesAme[cnt])
       sapImg.attr('src', imagesSap[cnt])
@@ -156,8 +151,7 @@ function preload(imagesRuby, imagesSap, imagesAme, imagesPearl, imagesGarnet) {
       cnt++;
     }
 
-$('#Image-Ruby')
-.mouseover(function() {
+$('#Image-Ruby').on('click', function () {
     loop();
   })
 $('#Image-Sap').on('click', function () {
